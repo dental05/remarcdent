@@ -98,18 +98,18 @@ const About = () => {
 
             {/* Stats Card */}
             <div className="bg-gradient-primary text-primary-foreground rounded-xl p-8 shadow-xl">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <p className="font-poppins text-3xl font-bold">15+</p>
-                  <p className="font-inter text-sm opacity-90">Ani experiență</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                <div className="rounded-lg bg-primary-foreground/10 px-4 py-5 sm:px-6">
+                  <p className="font-poppins text-2xl sm:text-3xl font-bold">15+</p>
+                  <p className="font-inter text-xs sm:text-sm opacity-90 mt-1">Ani experiență</p>
                 </div>
-                <div>
-                  <p className="font-poppins text-3xl font-bold">5000+</p>
-                  <p className="font-inter text-sm opacity-90">Pacienți</p>
+                <div className="rounded-lg bg-primary-foreground/10 px-4 py-5 sm:px-6">
+                  <p className="font-poppins text-2xl sm:text-3xl font-bold">5000+</p>
+                  <p className="font-inter text-xs sm:text-sm opacity-90 mt-1">Pacienți</p>
                 </div>
-                <div>
-                  <p className="font-poppins text-3xl font-bold">100%</p>
-                  <p className="font-inter text-sm opacity-90">Dedicare</p>
+                <div className="rounded-lg bg-primary-foreground/10 px-4 py-5 sm:px-6">
+                  <p className="font-poppins text-2xl sm:text-3xl font-bold">100%</p>
+                  <p className="font-inter text-xs sm:text-sm opacity-90 mt-1">Dedicare</p>
                 </div>
               </div>
             </div>
