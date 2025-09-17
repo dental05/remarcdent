@@ -1,44 +1,44 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import doctor1 from '@/assets/doctor-1.jpg';
-import doctor2 from '@/assets/doctor-2.jpg';
-import doctor3 from '@/assets/doctor-3.jpg';
-import doctor4 from '@/assets/doctor-4.jpg';
 
 const Team = () => {
   const team = [
     {
-      name: "Dr. Alexandru Popescu",
+      name: "Dr. Daciana Marc",
       role: "Medic Primar Stomatolog",
       specialization: "Implantologie & Chirurgie",
       experience: "18 ani experiență",
-      image: doctor1,
-      description: "Specialist în implantologie și chirurgie orală complexă, cu peste 3000 de implanturi realizate cu succes."
+      image: "/employees/daciana_marc.png",
+      description: "Coordonează echipa REMARC dent și gestionează cazuri complexe de implantologie și chirurgie orală.",
+      objectPosition: 'center 25%'
     },
     {
-      name: "Dr. Maria Ionescu",
+      name: "Dr. Alexandra Burz",
       role: "Medic Specialist Ortodont",
       specialization: "Ortodonție & Invisalign",
-      experience: "15 ani experiență",
-      image: doctor2,
-      description: "Expertă în ortodonție modernă, certificată Invisalign Provider, specializată în tratamente pentru adulți și copii."
-    },
-    {
-      name: "Dr. Andrei Gheorghe",
-      role: "Medic Specialist",
-      specialization: "Endodonție & Estetică",
       experience: "12 ani experiență",
-      image: doctor3,
-      description: "Pasionat de stomatologia estetică și tratamente endodontice complexe sub microscop."
+      image: "/employees/alexandra_burz.png",
+      description: "Creează tratamente ortodontice personalizate cu aparate moderne și soluții estetice Invisalign.",
+      objectPosition: 'center 10%'
     },
     {
-      name: "Dr. Elena Dumitrescu",
-      role: "Medic Specialist Pedodont",
-      specialization: "Pedodonție",
+      name: "Dr. Diana Dicu",
+      role: "Medic Specialist Endodont",
+      specialization: "Endodonție & Estetică",
       experience: "10 ani experiență",
-      image: doctor4,
-      description: "Dedicată îngrijirii dentare a copiilor, creând o experiență pozitivă și relaxantă pentru cei mici."
+      image: "/employees/dicu_diana.png",
+      description: "Pasionată de tratamente endodontice realizate sub microscop și estetică dentară minim invazivă.",
+      objectPosition: 'center 32%'
+    },
+    {
+      name: "Dr. Simon Marcu",
+      role: "Medic Specialist Protetică",
+      specialization: "Protetică & Estetică",
+      experience: "9 ani experiență",
+      image: "/employees/marcu_simon.png",
+      description: "Specialist în reabilitări protetice complexe și soluții estetice adaptate fiecărui zâmbet.",
+      objectPosition: 'center 20%'
     }
   ];
 
@@ -67,7 +67,8 @@ const Team = () => {
                 <img 
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{ objectPosition: member.objectPosition }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
@@ -105,15 +106,15 @@ const Team = () => {
         <div className="mt-16 bg-gradient-primary rounded-2xl p-8 text-primary-foreground">
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">4</p>
+              <p className="font-poppins text-3xl font-bold mb-2">23</p>
               <p className="font-inter text-sm opacity-90">Medici Specialiști</p>
             </div>
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">55+</p>
-              <p className="font-inter text-sm opacity-90">Ani Experiență Cumulată</p>
+              <p className="font-poppins text-3xl font-bold mb-2">300+</p>
+              <p className="font-inter text-sm opacity-90">Implanturi dentale anuale</p>
             </div>
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">10k+</p>
+              <p className="font-poppins text-3xl font-bold mb-2">10.000+</p>
               <p className="font-inter text-sm opacity-90">Tratamente Realizate</p>
             </div>
             <div>

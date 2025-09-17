@@ -11,13 +11,11 @@ const Footer = () => {
           {/* Logo & Description */}
           <div>
             <div className="mb-4">
-              <span className="font-poppins text-2xl font-bold">
-                <span className="text-primary-foreground">REMARC</span>
-                <span className="text-accent">dent</span>
-              </span>
-              <p className="text-xs opacity-75 font-inter mt-1">
-                CENTRU STOMATOLOGIC
-              </p>
+              <img
+                src="/logo_remarc.png"
+                alt="REMARC dent"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="font-inter text-sm opacity-80 leading-relaxed">
               Oferim servicii stomatologice complete într-un mediu modern și prietenos, 
@@ -69,22 +67,22 @@ const Footer = () => {
             <h3 className="font-poppins font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <a 
-                href="tel:+40712345678" 
+                href="tel:+40728254326" 
                 className="flex items-center gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
               >
                 <Phone className="w-4 h-4" />
-                +40 712 345 678
+                0728 254 326
               </a>
               <a 
-                href="mailto:contact@remarc-dent.ro" 
+                href="mailto:remarcdent@yahoo.com" 
                 className="flex items-center gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
               >
                 <Mail className="w-4 h-4" />
-                contact@remarc-dent.ro
+                remarcdent@yahoo.com
               </a>
               <div className="flex items-start gap-2 font-inter text-sm opacity-80">
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>Str. Sănătății Nr. 15,<br />Sector 1, București</span>
+                <span>Tudor Vladimirescu nr 3,<br />Alba Iulia, Romania</span>
               </div>
             </div>
 

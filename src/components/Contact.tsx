@@ -29,29 +29,29 @@ const Contact = () => {
     {
       icon: <Phone className="w-5 h-5" />,
       title: "Telefon",
-      content: "+40 712 345 678",
-      link: "tel:+40712345678",
+      content: "0728 254 326",
+      link: "tel:+40728254326",
       color: "primary"
     },
     {
       icon: <MessageCircle className="w-5 h-5" />,
       title: "WhatsApp",
-      content: "+40 712 345 678",
-      link: "https://wa.me/40712345678",
+      content: "0728 254 326",
+      link: "https://wa.me/40728254326",
       color: "accent"
     },
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      content: "contact@remarc-dent.ro",
-      link: "mailto:contact@remarc-dent.ro",
+      content: "remarcdent@yahoo.com",
+      link: "mailto:remarcdent@yahoo.com",
       color: "primary"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       title: "Adresă",
-      content: "Str. Sănătății Nr. 15, Sector 1, București",
-      link: "https://maps.google.com",
+      content: "Tudor Vladimirescu nr 3, Alba Iulia, Romania",
+      link: "https://maps.app.goo.gl/5EkBmih1cSqDKb4R6",
       color: "accent"
     }
   ];
@@ -220,9 +220,9 @@ const Contact = () => {
         {/* Map */}
         <Card className="mt-8 p-0 overflow-hidden animate-fade-up">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.573969078!2d26.0967!3d44.4477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI2JzUxLjciTiAyNsKwMDUnNDguMSJF!5e0!3m2!1sen!2sro!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4786.018537789664!2d23.576956777628528!3d46.07467107109054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474ea7d8d48bad7f%3A0xa22ee376131bc742!2sRemarc%20Dent!5e1!3m2!1sen!2sro!4v1758142472870!5m2!1sen!2sro"
             width="100%"
-            height="400"
+            height="450"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"

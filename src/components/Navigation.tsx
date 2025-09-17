@@ -37,13 +37,13 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center py-2 text-sm">
             <div className="flex items-center gap-4">
-              <a href="tel:+40712345678" className="flex items-center gap-1 text-primary hover:text-accent transition-colors">
+              <a href="tel:+40728254326" className="flex items-center gap-1 text-primary hover:text-accent transition-colors">
                 <Phone className="w-3 h-3" />
-                <span className="font-inter">+40 712 345 678</span>
+                <span className="font-inter">0728 254 326</span>
               </a>
               <span className="hidden md:flex items-center gap-1 text-muted-foreground">
                 <MapPin className="w-3 h-3" />
-                <span className="font-inter">Str. Sănătății Nr. 15, București</span>
+                <span className="font-inter">Tudor Vladimirescu nr 3, Alba Iulia</span>
               </span>
             </div>
             <div className="flex items-center gap-1 text-muted-foreground">
@@ -65,15 +65,11 @@ const Navigation = () => {
               onClick={() => scrollToSection('hero')}
               className="flex items-center cursor-pointer"
             >
-              <div className="flex flex-col">
-                <span className="font-poppins text-2xl font-bold">
-                  <span className="text-primary">REMARC</span>
-                  <span className="text-accent ml-1">dent</span>
-                </span>
-                <span className="text-xs text-muted-foreground font-inter uppercase tracking-wider">
-                  Centru Stomatologic
-                </span>
-              </div>
+              <img
+                src="/logo_remarc.png"
+                alt="REMARC dent"
+                className="h-12 w-auto"
+              />
             </div>
 
             {/* Desktop Navigation */}
