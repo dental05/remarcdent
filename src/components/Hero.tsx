@@ -52,22 +52,22 @@ const Hero = () => {
             </div>
             
             {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-background/90 shadow-sm sm:bg-transparent sm:shadow-none">
+            <div className="flex flex-col gap-3 sm:grid sm:grid-cols-3 sm:gap-4">
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-background/80 px-4 py-3 shadow-sm backdrop-blur-sm sm:border-0 sm:bg-transparent sm:shadow-none sm:backdrop-blur-0 sm:justify-center">
                 <Shield className="w-5 h-5 text-primary" />
-                <span className="font-inter text-sm sm:text-base text-muted-foreground">
+                <span className="font-inter text-sm sm:text-base text-muted-foreground leading-snug">
                   Tehnologie modernă
                 </span>
               </div>
-              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-background/90 shadow-sm sm:bg-transparent sm:shadow-none">
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-background/80 px-4 py-3 shadow-sm backdrop-blur-sm sm:border-0 sm:bg-transparent sm:shadow-none sm:backdrop-blur-0 sm:justify-center">
                 <Heart className="w-5 h-5 text-accent" />
-                <span className="font-inter text-sm sm:text-base text-muted-foreground">
+                <span className="font-inter text-sm sm:text-base text-muted-foreground leading-snug">
                   Îngrijire personalizată
                 </span>
               </div>
-              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-background/90 shadow-sm sm:bg-transparent sm:shadow-none">
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-background/80 px-4 py-3 shadow-sm backdrop-blur-sm sm:border-0 sm:bg-transparent sm:shadow-none sm:backdrop-blur-0 sm:justify-center">
                 <Award className="w-5 h-5 text-primary" />
-                <span className="font-inter text-sm sm:text-base text-muted-foreground">
+                <span className="font-inter text-sm sm:text-base text-muted-foreground leading-snug">
                   15+ ani experiență
                 </span>
               </div>

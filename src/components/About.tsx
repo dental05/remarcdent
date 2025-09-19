@@ -98,19 +98,24 @@ const About = () => {
 
             {/* Stats Card */}
             <div className="bg-gradient-primary text-primary-foreground rounded-xl p-8 shadow-xl">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                <div className="rounded-lg bg-primary-foreground/10 px-4 py-5 sm:px-6">
-                  <p className="font-poppins text-2xl sm:text-3xl font-bold">15+</p>
-                  <p className="font-inter text-xs sm:text-sm opacity-90 mt-1">Ani experiență</p>
-                </div>
-                <div className="rounded-lg bg-primary-foreground/10 px-4 py-5 sm:px-6">
-                  <p className="font-poppins text-2xl sm:text-3xl font-bold">5000+</p>
-                  <p className="font-inter text-xs sm:text-sm opacity-90 mt-1">Pacienți</p>
-                </div>
-                <div className="rounded-lg bg-primary-foreground/10 px-4 py-5 sm:px-6">
-                  <p className="font-poppins text-2xl sm:text-3xl font-bold">100%</p>
-                  <p className="font-inter text-xs sm:text-sm opacity-90 mt-1">Dedicare</p>
-                </div>
+              <div className="flex flex-col gap-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                {[
+                  { value: '15+', label: 'Ani experiență' },
+                  { value: '5000+', label: 'Pacienți' },
+                  { value: '100%', label: 'Dedicare' }
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex items-center justify-between rounded-xl bg-primary-foreground/10 px-4 py-4 sm:flex-col sm:justify-center sm:gap-1 sm:text-center sm:px-6"
+                  >
+                    <p className="font-poppins text-2xl sm:text-3xl font-bold">
+                      {stat.value}
+                    </p>
+                    <p className="font-inter text-xs sm:text-sm opacity-90">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
