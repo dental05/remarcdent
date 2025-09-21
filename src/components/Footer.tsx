@@ -74,11 +74,16 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 remarcdent@yahoo.com
               </a>
-              <div className="flex items-start gap-2 font-inter text-sm opacity-80">
+              <a
+                href="https://maps.app.goo.gl/5EkBmih1cSqDKb4R6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
+              >
                 <MapPin className="w-4 h-4 mt-0.5" />
                 <span>Tudor Vladimirescu nr 3,<br />Alba Iulia, Romania</span>
+              </a>
               </div>
-            </div>
 
             {/* Social Media */}
             <div className="flex gap-3 mt-4">

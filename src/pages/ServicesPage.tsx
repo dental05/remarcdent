@@ -50,19 +50,18 @@ const ServicesPage = () => {
               </div>
             </div>
 
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <video
-                className="h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster="/poze_cabinet/Foto-1.jpg"
-              >
-                <source src="/poze_cabinet/video3.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent" />
-            </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <video
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/poze_cabinet/video3.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent" />
+              </div>
           </div>
         </div>
       </section>
