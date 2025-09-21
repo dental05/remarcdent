@@ -17,6 +17,11 @@ const About = () => {
       icon: <GraduationCap className="w-6 h-6" />,
       title: "Formare continuă",
       description: "Participăm regulat la cursuri și conferințe internaționale"
+    },
+    {
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: "Laborator propriu de tehnică dentară",
+      description: "Realizăm rapid lucrări protetice personalizate, fabricate in-house"
     }
   ];
 
@@ -42,7 +47,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="animate-fade-up">
             <h3 className="font-poppins text-2xl font-semibold text-foreground mb-6">
@@ -101,8 +106,8 @@ const About = () => {
               <div className="flex flex-col gap-3 sm:grid sm:grid-cols-3 sm:gap-4">
                 {[
                   { value: '15+', label: 'Ani experiență' },
-                  { value: '5000+', label: 'Pacienți' },
-                  { value: '100%', label: 'Dedicare' }
+                  { value: '10000+', label: 'Pacienți' },
+                  { value: '30+', label: 'Profesioniști' }
                 ].map((stat) => (
                   <div
                     key={stat.label}

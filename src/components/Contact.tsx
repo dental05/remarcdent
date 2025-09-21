@@ -210,7 +210,7 @@ const Contact = () => {
               
               <div className="mt-4 p-3 bg-accent/10 rounded-lg">
                 <p className="font-inter text-sm text-accent font-medium">
-                  Pentru urgențe, suntem disponibili 24/7
+                  Pentru urgențe, te rugăm să ne contactezi în programul de lucru
                 </p>
               </div>
             </Card>
