@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Info, Stethoscope, Users, CalendarClock } from 'lucide-react';
+import { ArrowRight, Info, Stethoscope, Users, CalendarClock, Sparkles, Shield, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const pageHighlights = [
@@ -64,27 +64,63 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
-            {pageHighlights.map(({ title, description, to, accentClasses, Icon }, index) => (
-              <Card
-                key={title}
-                className="p-6 bg-background shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${accentClasses}`}>
-                  <Icon className="w-6 h-6" />
+          <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+            <Card className="p-8 bg-gradient-to-br from-primary/10 via-background to-background border-0 shadow-lg animate-fade-up">
+              <div className="flex items-center gap-3 mb-6">
+                <Sparkles className="w-6 h-6 text-primary" />
+                <span className="font-inter uppercase text-xs tracking-[0.3em] text-primary">Experiență premium</span>
+              </div>
+              <h3 className="font-poppins text-3xl font-semibold text-foreground mb-4">
+                Totul pentru confortul și sănătatea zâmbetului tău
+              </h3>
+              <p className="font-inter text-base text-muted-foreground leading-relaxed mb-6">
+                Clinica REMARC dent îmbină expertiza unei echipe multidisciplinare cu tehnologie de ultimă generație,
+                pentru a oferi tratamente personalizate, predictibile și o experiență relaxată la fiecare vizită.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="rounded-xl bg-background/70 border border-border/60 px-5 py-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Shield className="w-5 h-5 text-primary" />
+                    <p className="font-poppins text-sm font-semibold text-foreground">Tehnologie digitală completă</p>
+                  </div>
+                  <p className="font-inter text-sm text-muted-foreground">
+                    Scanner intraoral, radiologie digitală și planificare asistată pentru tratamente rapide și precise.
+                  </p>
                 </div>
-                <h3 className="font-poppins text-xl font-semibold text-foreground mb-3">{title}</h3>
-                <p className="font-inter text-sm text-muted-foreground mb-6 leading-relaxed">{description}</p>
-                <Link
-                  to={to}
-                  className="font-inter text-sm font-medium text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                <div className="rounded-xl bg-background/70 border border-border/60 px-5 py-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Smile className="w-5 h-5 text-accent" />
+                    <p className="font-poppins text-sm font-semibold text-foreground">Îngrijire multidisciplinară</p>
+                  </div>
+                  <p className="font-inter text-sm text-muted-foreground">
+                    Echipe dedicate pentru implantologie, ortodonție, estetică și tratamente pediatric.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
+              {pageHighlights.map(({ title, description, to, accentClasses, Icon }, index) => (
+                <Card
+                  key={title}
+                  className="p-6 bg-background shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-up"
+                  style={{ animationDelay: `${150 + index * 80}ms` }}
                 >
-                  Vezi detalii
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Card>
-            ))}
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${accentClasses}`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-poppins text-lg font-semibold text-foreground mb-2">{title}</h3>
+                  <p className="font-inter text-sm text-muted-foreground mb-4 leading-relaxed">{description}</p>
+                  <Link
+                    to={to}
+                    className="font-inter text-sm font-medium text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                  >
+                    Vezi detalii
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
