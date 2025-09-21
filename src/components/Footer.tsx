@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,24 +29,24 @@ const Footer = () => {
             <h3 className="font-poppins font-semibold mb-4">Linkuri Rapide</h3>
             <ul className="space-y-2 font-inter text-sm">
               <li>
-                <a href="#about" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link to="/despre" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
                   Despre Noi
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link to="/servicii" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
                   Servicii
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#team" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link to="/echipa" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
                   Echipa
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link to="/contact" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,23 +1,108 @@
-import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Services from '@/components/Services';
-import Team from '@/components/Team';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Info, Stethoscope, Users, CalendarClock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const pageHighlights = [
+  {
+    title: 'Despre REMARC dent',
+    description:
+      'Află povestea clinicii, filosofia noastră și modul în care îmbinăm tehnologia cu grija pentru pacienți.',
+    to: '/despre',
+    accentClasses: 'bg-primary/10 text-primary',
+    Icon: Info,
+  },
+  {
+    title: 'Serviciile noastre',
+    description:
+      'Descoperă gama completă de tratamente stomatologice, de la profilaxie la reabilitări complexe.',
+    to: '/servicii',
+    accentClasses: 'bg-accent/10 text-accent',
+    Icon: Stethoscope,
+  },
+  {
+    title: 'Echipa medicală',
+    description:
+      'Cunoaște specialiștii REMARC dent și experiența pe care o pun în slujba zâmbetului tău.',
+    to: '/echipa',
+    accentClasses: 'bg-primary/10 text-primary',
+    Icon: Users,
+  },
+  {
+    title: 'Contact & programări',
+    description:
+      'Vezi programul complet, modalitățile de contact și trimite o cerere de programare online.',
+    to: '/contact',
+    accentClasses: 'bg-accent/10 text-accent',
+    Icon: CalendarClock,
+  },
+];
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Team />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="bg-background">
+      <Hero />
+
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Descoperă clinica REMARC dent
+            </h2>
+            <p className="font-inter text-lg text-muted-foreground">
+              Navighează prin paginile dedicate pentru a găsi rapid informațiile de care ai nevoie despre
+              serviciile, echipa și programările noastre.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {pageHighlights.map(({ title, description, to, accentClasses, Icon }, index) => (
+              <Card
+                key={title}
+                className="p-6 bg-background shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${accentClasses}`}>
+                  <Icon className="w-6 h-6" />
+                </div>
+                <h3 className="font-poppins text-xl font-semibold text-foreground mb-3">{title}</h3>
+                <p className="font-inter text-sm text-muted-foreground mb-6 leading-relaxed">{description}</p>
+                <Link
+                  to={to}
+                  className="font-inter text-sm font-medium text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                >
+                  Vezi detalii
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-primary rounded-3xl px-8 py-12 md:px-16 md:py-16 text-primary-foreground">
+            <div className="grid md:grid-cols-[2fr_1fr] gap-8 items-center">
+              <div>
+                <h2 className="font-poppins text-3xl md:text-4xl font-bold mb-4">
+                  Pregătit pentru un zâmbet sănătos și încrezător?
+                </h2>
+                <p className="font-inter text-base md:text-lg opacity-90 leading-relaxed">
+                  Suntem aici să te ghidăm spre tratamentele potrivite și să-ți oferim o experiență confortabilă la
+                  fiecare vizită. Programează-te online sau contactează-ne pentru mai multe detalii.
+                </p>
+              </div>
+              <div className="flex md:justify-end">
+                <Button asChild variant="hero" size="lg">
+                  <Link to="/contact">Programează o consultație</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

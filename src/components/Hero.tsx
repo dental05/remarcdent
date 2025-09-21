@@ -1,16 +1,12 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Heart, Award } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const heroImage = '/poza_interior_cabinet.jpg';
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const section = document.getElementById('contact');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="hero" className="relative min-h-[80vh] flex items-center overflow-hidden">
@@ -36,7 +32,7 @@ const Hero = () => {
               <Button 
                 variant="hero" 
                 size="lg"
-                onClick={scrollToContact}
+                onClick={() => navigate('/contact')}
                 className="group"
               >
                 Programează-te acum
@@ -45,7 +41,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/servicii')}
               >
                 Vezi serviciile
               </Button>

@@ -10,8 +10,10 @@ import {
   Zap,
   ArrowRight
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: <Heart className="w-8 h-8" />,
@@ -56,10 +58,6 @@ const Services = () => {
       color: "accent"
     }
   ];
-
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section id="services" className="py-20 bg-background">
@@ -111,7 +109,7 @@ const Services = () => {
               </ul>
               
               <button 
-                onClick={scrollToContact}
+                onClick={() => navigate('/contact')}
                 className="font-inter text-sm font-medium text-primary hover:text-accent transition-colors flex items-center gap-1 group-hover:gap-2"
               >
                 Află mai multe
@@ -125,7 +123,7 @@ const Services = () => {
           <Button 
             variant="hero" 
             size="lg"
-            onClick={scrollToContact}
+            onClick={() => navigate('/contact')}
           >
             Programează o consultație
           </Button>
