@@ -102,19 +102,9 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-inter text-sm opacity-60">
-              © {currentYear} REMARC dent. Toate drepturile rezervate.
-            </p>
-            <div className="flex gap-6 font-inter text-sm">
-              <a href="#" className="opacity-60 hover:opacity-100 transition-opacity">
-                Politica de Confidențialitate
-              </a>
-              <a href="#" className="opacity-60 hover:opacity-100 transition-opacity">
-                Termeni și Condiții
-              </a>
-            </div>
-          </div>
+          <p className="font-inter text-sm opacity-60 text-center">
+            © {currentYear} REMARC dent. Toate drepturile rezervate.
+          </p>
         </div>
       </div>
     </footer>

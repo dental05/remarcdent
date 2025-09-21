@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Info, Stethoscope, Users, CalendarClock, Sparkles, Shield, Smile } from 'lucide-react';
+import { ArrowRight, Info, Stethoscope, Users, CalendarClock, Sparkles, Shield, Smile, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const pageHighlights = [
@@ -64,8 +64,8 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6 items-stretch">
-            <Card className="p-8 bg-gradient-to-br from-primary/10 via-background to-background border-0 shadow-lg animate-fade-up">
+          <div className="grid gap-6 lg:grid-cols-12 items-stretch">
+            <Card className="p-8 bg-gradient-to-br from-primary/10 via-background to-background border-0 shadow-lg animate-fade-up lg:col-span-5 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
                 <Sparkles className="w-6 h-6 text-primary" />
                 <span className="font-inter uppercase text-xs tracking-[0.3em] text-primary">Experiență premium</span>
@@ -77,7 +77,7 @@ const Index = () => {
                 Clinica REMARC dent îmbină expertiza unei echipe multidisciplinare cu tehnologie de ultimă generație,
                 pentru a oferi tratamente personalizate, predictibile și o experiență relaxată la fiecare vizită.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto">
                 <div className="rounded-xl bg-background/70 border border-border/60 px-5 py-4">
                   <div className="flex items-center gap-3 mb-2">
                     <Shield className="w-5 h-5 text-primary" />
@@ -96,10 +96,19 @@ const Index = () => {
                     Echipe dedicate pentru implantologie, ortodonție, estetică și tratamente pediatric.
                   </p>
                 </div>
+                <div className="rounded-xl bg-background/70 border border-border/60 px-5 py-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Heart className="w-5 h-5 text-primary" />
+                    <p className="font-poppins text-sm font-semibold text-foreground">Laborator tehnică dentară</p>
+                  </div>
+                  <p className="font-inter text-sm text-muted-foreground">
+                    Lucrări protetice realizate in-house pentru adaptări rapide și control total al calității.
+                  </p>
+                </div>
               </div>
             </Card>
 
-            <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:col-span-7">
               {pageHighlights.map(({ title, description, to, accentClasses, Icon }, index) => (
                 <Card
                   key={title}
