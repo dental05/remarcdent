@@ -42,7 +42,7 @@ const About = () => {
             Despre <span className="text-primary">REMARC dent</span>
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
-            De peste 15 ani, oferim servicii stomatologice de excelență, 
+            De peste 20 ani, oferim servicii stomatologice de excelență, 
             combinând expertiza profesională cu tehnologia modernă și grija pentru pacienți.
           </p>
         </div>

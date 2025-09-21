@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-[1.2fr,1fr,1fr]">
           {/* Logo & Description */}
           <div>
             <div className="mb-4">
@@ -56,18 +56,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-poppins font-semibold mb-4">Servicii Principale</h3>
-            <ul className="space-y-2 font-inter text-sm">
-              <li className="opacity-80">• Stomatologie Generală</li>
-              <li className="opacity-80">• Implantologie</li>
-              <li className="opacity-80">• Ortodonție</li>
-              <li className="opacity-80">• Estetică Dentară</li>
-              <li className="opacity-80">• Urgențe Stomatologice</li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="font-poppins font-semibold mb-4">Contact</h3>
@@ -95,22 +83,13 @@ const Footer = () => {
             {/* Social Media */}
             <div className="flex gap-3 mt-4">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/profile.php?id=100063492641385" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-foreground transition-all"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-foreground transition-all"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
