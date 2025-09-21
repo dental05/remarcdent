@@ -25,6 +25,7 @@ const Navigation = () => {
     { label: 'Acasă', to: '/' },
     { label: 'Despre', to: '/despre' },
     { label: 'Servicii', to: '/servicii' },
+    { label: 'Tarife', to: '/lista-preturi' },
     { label: 'Echipa', to: '/echipa' },
     { label: 'Contact', to: '/contact' },
   ];

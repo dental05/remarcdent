@@ -22,6 +22,14 @@ const pageHighlights = [
     Icon: Stethoscope,
   },
   {
+    title: 'Lista de tarife',
+    description:
+      'Verifică prețurile actualizate pentru toate procedurile și planifică următoarea vizită în funcție de buget.',
+    to: '/lista-preturi',
+    accentClasses: 'bg-primary/10 text-primary',
+    Icon: Info,
+  },
+  {
     title: 'Echipa medicală',
     description:
       'Cunoaște specialiștii REMARC dent și experiența pe care o pun în slujba zâmbetului tău.',
@@ -56,7 +64,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
             {pageHighlights.map(({ title, description, to, accentClasses, Icon }, index) => (
               <Card
                 key={title}
