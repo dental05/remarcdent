@@ -105,9 +105,9 @@ const About = () => {
             <div className="bg-gradient-primary text-primary-foreground rounded-xl p-8 shadow-xl">
               <div className="flex flex-col gap-3 sm:grid sm:grid-cols-3 sm:gap-4">
                 {[
-                  { value: '15+', label: 'Ani experiență' },
+                  { value: '20+', label: 'Ani experiență' },
                   { value: '10000+', label: 'Pacienți' },
-                  { value: '30+', label: 'Profesioniști' }
+                  { value: '23', label: 'Medici specialiști' }
                 ].map((stat) => (
                   <div
                     key={stat.label}
