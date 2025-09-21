@@ -45,15 +45,18 @@ const TeamPage = () => {
             </div>
 
             <div className="order-1 lg:order-2">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video">
                 <video
-                  className="w-full h-auto"
                   autoPlay
                   muted
                   loop
                   playsInline
-                  controls
-                  poster="/poze_cabinet/Foto-33.jpg"
+                  className="absolute top-1/2 left-1/2"
+                  style={{
+                    width: 'auto',
+                    height: '180%',
+                    transform: 'translate(-50%, -50%) rotate(90deg)',
+                  }}
                 >
                   <source src="/poze_cabinet/video1.mp4" type="video/mp4" />
                 </video>

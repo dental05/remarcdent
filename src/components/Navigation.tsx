@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MapPin, Clock } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
@@ -32,28 +32,6 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-primary-light border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between items-center py-2 text-sm">
-            <div className="flex items-center gap-4">
-              <a href="tel:+40728254326" className="flex items-center gap-1 text-primary hover:text-accent transition-colors">
-                <Phone className="w-3 h-3" />
-                <span className="font-inter">0728 254 326</span>
-              </a>
-              <span className="hidden md:flex items-center gap-1 text-muted-foreground">
-                <MapPin className="w-3 h-3" />
-                <span className="font-inter">Tudor Vladimirescu nr 3, Alba Iulia</span>
-              </span>
-            </div>
-            <div className="flex items-center gap-1 text-muted-foreground">
-              <Clock className="w-3 h-3" />
-              <span className="font-inter">Luni - Vineri: 09:00 - 19:00</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation */}
       <nav
         className={`sticky top-0 z-50 bg-background transition-all duration-300 ${
