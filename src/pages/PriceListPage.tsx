@@ -4,10 +4,44 @@ import { ServiceCategoryIcon } from '@/components/ServiceCategoryIcon';
 import { serviceCategoryMeta, servicesGroupedByCategory, serviceItems, type ServiceCategoryId } from '@/data/services';
 import { formatPrice } from '@/lib/format';
 import { slugify } from '@/lib/string';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useCallback, useEffect, useMemo } from 'react';
 
 const PriceListPage = () => {
   const totalServices = serviceItems.length;
+  const location = useLocation();
+
+  const slugToCategory = useMemo(() => {
+    const map = new Map<string, ServiceCategoryId>();
+    servicesGroupedByCategory.forEach(({ category }) => {
+      map.set(slugify(category), category);
+    });
+    return map;
+  }, []);
+
+  const scrollToCategory = useCallback((category: ServiceCategoryId, updateHash = true) => {
+    const targetId = slugify(category);
+    const element = typeof window !== 'undefined' ? document.getElementById(targetId) : null;
+    if (!element) return;
+
+    const headerOffset = 112;
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: elementTop - headerOffset, behavior: 'smooth' });
+
+    if (updateHash) {
+      window.history.replaceState(null, '', `#${targetId}`);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const slug = decodeURIComponent(location.hash.slice(1));
+    const category = slugToCategory.get(slug);
+    if (!category) return;
+
+    const timer = window.setTimeout(() => scrollToCategory(category, false), 150);
+    return () => window.clearTimeout(timer);
+  }, [location.hash, scrollToCategory, slugToCategory]);
 
   return (
     <div className="bg-background">
@@ -34,16 +68,7 @@ const PriceListPage = () => {
                 size="sm"
                 variant="outline"
                 className="rounded-full border-primary/30 text-primary hover:bg-primary/10"
-                onClick={() => {
-                  const targetId = slugify(category);
-                  const target = typeof window !== 'undefined' ? document.getElementById(targetId) : null;
-                  if (target) {
-                    const headerOffset = 120;
-                    const elementTop = target.getBoundingClientRect().top + window.scrollY;
-                    window.scrollTo({ top: elementTop - headerOffset, behavior: 'smooth' });
-                    window.history.replaceState(null, '', `#${targetId}`);
-                  }
-                }}
+                onClick={() => scrollToCategory(category)}
               >
                 {serviceCategoryMeta[category].title}
               </Button>

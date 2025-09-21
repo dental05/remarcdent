@@ -2,23 +2,33 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { serviceCategoryMeta, serviceItems, type ServiceCategoryId } from '@/data/services';
+import { serviceCategoryMeta, serviceItems, serviceCategories, type ServiceCategoryId } from '@/data/services';
 import { slugify } from '@/lib/string';
 import { ServiceCategoryIcon } from '@/components/ServiceCategoryIcon';
 
-const highlightCategories: ServiceCategoryId[] = [
+const preferredOrder: ServiceCategoryId[] = [
   'Profilaxie și igienizare',
   'Ortodonție',
   'Implantologie și regenerare',
-  'Chirurgie orală și BMF',
-  'Protetică fixă',
-  'Endodonție',
   'Estetică dentară',
+  'Protetică fixă',
+  'Protetică mobilă',
+  'Endodonție',
   'Parodontologie',
+  'Chirurgie orală și BMF',
+  'Odontoterapie restauratoare',
+  'Consultații și diagnostic',
+  'Pedodonție',
+  'Proceduri adjuvante',
+  'Urgențe stomatologice',
 ];
 
+const categoriesToRender = preferredOrder.concat(
+  serviceCategories.filter((category) => !preferredOrder.includes(category)),
+);
+
 const Services = () => {
-  const cards = highlightCategories.map((categoryId, index) => {
+  const cards = categoriesToRender.map((categoryId, index) => {
     const meta = serviceCategoryMeta[categoryId];
     const examples = meta.featuredExamples
       ?.map(exampleId => serviceItems.find(item => item.id === exampleId)?.name)
