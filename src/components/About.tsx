@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Echipă experimentată",
-      description: "Medici specialiști cu peste 15 ani de experiență în stomatologie"
+      description: "Medici specialiști cu peste 20 de ani de experiență în stomatologie"
     },
     {
       icon: <GraduationCap className="w-6 h-6" />,

@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
             <div className="rounded-xl border border-border/60 bg-background/70 px-5 py-4 backdrop-blur">
               <Award className="mx-auto mb-3 h-5 w-5 text-primary" />
-              <p className="mb-1 font-poppins text-sm font-semibold text-foreground">15+ ani de excelență</p>
+              <p className="mb-1 font-poppins text-sm font-semibold text-foreground">20+ ani de excelență</p>
               <p className="font-inter text-xs text-muted-foreground">
                 Mii de pacienți tratați cu succes și recomandări care ne inspiră să evoluăm constant.
               </p>
