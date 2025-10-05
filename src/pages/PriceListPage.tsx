@@ -55,9 +55,14 @@ const PriceListPage = () => {
               Transparență completă pentru toate tratamentele
             </h1>
             <p className="font-inter text-lg text-muted-foreground">
-              Consultă tarifele pentru cele {totalServices} proceduri stomatologice oferite de REMARC dent. Fiecare
+              Consultă tarifele pentru cele {totalServices} proceduri stomatologice oferite de REMARC DENT. Fiecare
               categorie cuprinde tratamente detaliate și tarife actualizate, pentru ca tu să iei decizii informate.
             </p>
+            <div className="mt-6 rounded-xl border border-primary/30 bg-primary/5 px-6 py-4">
+              <p className="font-inter text-sm text-foreground">
+                Poți achita tratamentele în până la 12 rate prin cardurile de credit Banca Transilvania (BT).
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-12 animate-fade-up">

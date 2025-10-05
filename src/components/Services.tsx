@@ -78,7 +78,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-up">
           <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Serviciile REMARC dent
+            Serviciile REMARC DENT
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
             Acoperim integral nevoile stomatologice – de la prevenție și estetică la intervenții chirurgicale complexe și

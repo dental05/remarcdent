@@ -26,11 +26,11 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 py-24">
         <div className="max-w-3xl mx-auto text-center text-primary-foreground animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-4 py-2 text-xs font-medium uppercase tracking-[0.3em] text-primary backdrop-blur-sm">
-            Clinica REMARC dent
+            Clinica REMARC DENT
           </span>
 
           <h1 className="mt-6 mb-4 font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Zâmbetul tău, <span className="text-primary">prioritatea</span> noastră
+            Zâmbete remarcabile, <span className="text-primary">prioritatea</span> noastră
           </h1>
 
           <p className="mb-10 font-inter text-lg md:text-xl text-muted-foreground/90 leading-relaxed">
@@ -51,9 +51,9 @@ const Hero = () => {
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-border/60 bg-background/70 px-5 py-4 backdrop-blur">
               <Shield className="mx-auto mb-3 h-5 w-5 text-primary" />
-              <p className="mb-1 font-poppins text-sm font-semibold text-foreground">Tehnologie digitală completă</p>
+              <p className="mb-1 font-poppins text-sm font-semibold text-foreground">Tehnologie digitală</p>
               <p className="font-inter text-xs text-muted-foreground">
-                Scanner intraoral, radiologie 3D și chirurgie ghidată pentru tratamente precise.
+                Scanner intraoral, radiologie și imprimantă 3D pentru tratamente precise.
               </p>
             </div>
             <div className="rounded-xl border border-border/60 bg-background/70 px-5 py-4 backdrop-blur">

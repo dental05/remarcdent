@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { orderedCategories, teamMembers, type TeamMember } from '@/data/team';
 
 const categoryLabels: Record<TeamMember['category'], string> = {
-  Medici: 'Medici specialiști',
+  Medici: 'Medici stomatologi',
   'Tehnicieni dentari': 'Tehnicieni dentari',
   'Asistenti medicali': 'Asistenți medicali',
   'Management & suport': 'Management și suport',
@@ -36,10 +36,10 @@ const Team = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-up max-w-3xl mx-auto">
           <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Echipa REMARC dent
+            Echipa REMARC DENT
           </h2>
           <p className="font-inter text-lg text-muted-foreground">
-            Suntem o echipă multidisciplinară de medici, tehnicieni, asistenți și specialiști în management pregătiți
+            Suntem o echipă multidisciplinară de medici stomatologi, tehnicieni, asistenți și profesioniști în management pregătiți
             să ofere îngrijire completă, empatică și modernă fiecărui pacient.
           </p>
         </div>
@@ -102,7 +102,7 @@ const Team = () => {
             </div>
             <div>
               <p className="font-poppins text-3xl font-bold mb-2">{medicsCount}</p>
-              <p className="font-inter text-sm opacity-90">Medici stomatologi și specialiști</p>
+              <p className="font-inter text-sm opacity-90">Medici stomatologi</p>
             </div>
             <div>
               <p className="font-poppins text-3xl font-bold mb-2">{assistantsCount}</p>

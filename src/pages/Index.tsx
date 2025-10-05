@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const pageHighlights = [
   {
-    title: 'Despre REMARC dent',
+    title: 'Despre REMARC DENT',
     description:
       'Află povestea clinicii, filosofia noastră și modul în care îmbinăm tehnologia cu grija pentru pacienți.',
     to: '/despre',
@@ -32,7 +32,7 @@ const pageHighlights = [
   {
     title: 'Echipa medicală',
     description:
-      'Cunoaște specialiștii REMARC dent și experiența pe care o pun în slujba zâmbetului tău.',
+      'Cunoaște medicii stomatologi REMARC DENT și experiența pe care o pun în slujba zâmbetului tău.',
     to: '/echipa',
     accentClasses: 'bg-primary/10 text-primary',
     Icon: Users,
@@ -56,7 +56,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Descoperă clinica REMARC dent
+              Descoperă clinica REMARC DENT
             </h2>
             <p className="font-inter text-lg text-muted-foreground">
               Navighează prin paginile dedicate pentru a găsi rapid informațiile de care ai nevoie despre
@@ -74,17 +74,17 @@ const Index = () => {
                 Totul pentru confortul și sănătatea zâmbetului tău
               </h3>
               <p className="font-inter text-base text-muted-foreground leading-relaxed mb-6">
-                Clinica REMARC dent îmbină expertiza unei echipe multidisciplinare cu tehnologie de ultimă generație,
+                Clinica REMARC DENT îmbină actul medical al unei echipe multidisciplinare cu tehnologie actuală,
                 pentru a oferi tratamente personalizate, predictibile și o experiență relaxată la fiecare vizită.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto">
                 <div className="rounded-xl bg-background/70 border border-border/60 px-5 py-4">
                   <div className="flex items-center gap-3 mb-2">
                     <Shield className="w-5 h-5 text-primary" />
-                    <p className="font-poppins text-sm font-semibold text-foreground">Tehnologie digitală completă</p>
+                    <p className="font-poppins text-sm font-semibold text-foreground">Tehnologie digitală</p>
                   </div>
                   <p className="font-inter text-sm text-muted-foreground">
-                    Scanner intraoral, radiologie digitală și planificare asistată pentru tratamente rapide și precise.
+                    Scanner intraoral, radiologie și imprimantă 3D pentru tratamente rapide și precise.
                   </p>
                 </div>
                 <div className="rounded-xl bg-background/70 border border-border/60 px-5 py-4">

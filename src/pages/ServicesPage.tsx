@@ -24,7 +24,7 @@ const ServicesPage = () => {
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
                 {[
                   'Planuri interdisciplinare personalizate',
-                  'Tehnologie digitală și imagistică 3D',
+                  'Tehnologie digitală și imagistică avansată',
                   'Lucrări protetice fabricate in-house',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2 rounded-full bg-background border border-border/40 px-4 py-2">

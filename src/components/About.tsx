@@ -5,18 +5,18 @@ const About = () => {
   const features = [
     {
       icon: <Stethoscope className="w-6 h-6" />,
-      title: "Echipament de ultimă generație",
+      title: "Echipamente actuale",
       description: "Investim constant în tehnologie modernă pentru rezultate superioare"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Echipă experimentată",
-      description: "Medici specialiști cu peste 20 de ani de experiență în stomatologie"
+      description: "Medici stomatologi cu peste 20 de ani de experiență în stomatologie"
     },
     {
       icon: <GraduationCap className="w-6 h-6" />,
       title: "Formare continuă",
-      description: "Participăm regulat la cursuri și conferințe internaționale"
+      description: "Participăm regulat la cursuri și conferințe naționale și internaționale"
     },
     {
       icon: <Stethoscope className="w-6 h-6" />,
@@ -39,11 +39,11 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-up">
           <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Despre <span className="text-primary">REMARC dent</span>
+            Despre <span className="text-primary">REMARC DENT</span>
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
             De peste 20 ani, oferim servicii stomatologice de excelență, 
-            combinând expertiza profesională cu tehnologia modernă și grija pentru pacienți.
+            combinând actul medical de calitate cu tehnologia modernă și grija pentru pacienți.
           </p>
         </div>
 
@@ -55,14 +55,14 @@ const About = () => {
             </h3>
             
             <p className="font-inter text-muted-foreground mb-6 leading-relaxed">
-              La REMARC dent, credem că fiecare zâmbet este unic și merită cea mai bună 
-              îngrijire posibilă. Echipa noastră de specialiști combină expertiza medicală 
+              La REMARC DENT, credem că fiecare zâmbet este unic și merită cea mai bună 
+              îngrijire posibilă. Echipa noastră de medici stomatologi combină actul medical 
               cu o abordare caldă și prietenoasă, pentru a face fiecare vizită cât mai 
               plăcută și eficientă.
             </p>
 
             <p className="font-inter text-muted-foreground mb-8 leading-relaxed">
-              Investim continuu în echipamente de ultimă generație și în formarea 
+              Investim continuu în echipamente actuale și în formarea 
               profesională a echipei noastre, pentru a vă oferi tratamente la cele 
               mai înalte standarde internaționale.
             </p>
@@ -107,7 +107,7 @@ const About = () => {
                 {[
                   { value: '20+', label: 'Ani experiență' },
                   { value: '10000+', label: 'Pacienți' },
-                  { value: '23', label: 'Medici specialiști' }
+                  { value: '23', label: 'Medici stomatologi' }
                 ].map((stat) => (
                   <div
                     key={stat.label}

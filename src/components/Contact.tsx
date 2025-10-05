@@ -57,8 +57,8 @@ const Contact = () => {
   ];
 
   const schedule = [
-    { day: "Luni - Vineri", hours: "09:00 - 19:00" },
-    { day: "Sâmbătă", hours: "10:00 - 14:00" },
+    { day: "Luni - Vineri", hours: "08:00 - 20:00" },
+    { day: "Sâmbătă", hours: "10:00 - 13:00" },
     { day: "Duminică", hours: "Închis" }
   ];
 
@@ -222,7 +222,7 @@ const Contact = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="REMARC dent Location"
+            title="REMARC DENT Location"
             className="w-full"
           />
         </Card>

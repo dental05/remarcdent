@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="mb-4">
               <img
                 src="/logo_remarc.png"
-                alt="REMARC dent"
+                alt="REMARC DENT"
                 className="h-12 w-auto"
               />
             </div>
@@ -103,7 +103,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <p className="font-inter text-sm opacity-60 text-center">
-            © {currentYear} REMARC dent. Toate drepturile rezervate.
+            © {currentYear} REMARC DENT. Toate drepturile rezervate.
           </p>
         </div>
       </div>

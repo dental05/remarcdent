@@ -11,10 +11,10 @@ const TeamPage = () => {
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
             <div className="order-2 lg:order-1">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background px-4 py-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">
-                Echipa REMARC dent
+                Echipa REMARC DENT
               </span>
               <h1 className="mt-6 mb-4 font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Specialiști dedicați fiecărui zâmbet
+                Medici stomatologi dedicați fiecărui zâmbet
               </h1>
               <p className="mb-8 font-inter text-base md:text-lg text-muted-foreground leading-relaxed">
                 23 de medici și tehnicieni dentari colaborează zilnic într-un flux integrat, susținut de laboratorul
