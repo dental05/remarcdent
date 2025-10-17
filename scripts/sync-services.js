@@ -129,7 +129,8 @@ const main = async () => {
   });
 
   const items = records.map((row) => {
-    const id = Number.parseInt(row['Nr.crt.'] ?? row['Nr.crt'], 10);
+    const idValue = row['Nr.crt.'] ?? row['Nr.crt'] ?? row['﻿Nr.crt.'];
+    const id = Number.parseInt(idValue, 10);
     if (Number.isNaN(id)) {
       throw new Error(`Invalid service id for row: ${JSON.stringify(row)}`);
     }
