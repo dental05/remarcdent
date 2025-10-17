@@ -128,7 +128,7 @@ const PriceListPage = () => {
                             </td>
                             <td className="px-6 py-3 text-right">
                               <span className="font-inter text-sm font-semibold text-primary">
-                                {formatPrice(item.price, item.currency)}
+                                {formatPrice(item.price)}
                               </span>
                             </td>
                           </tr>

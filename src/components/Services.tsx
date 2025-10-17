@@ -7,20 +7,16 @@ import { slugify } from '@/lib/string';
 import { ServiceCategoryIcon } from '@/components/ServiceCategoryIcon';
 
 const preferredOrder: ServiceCategoryId[] = [
+  'Consultații',
   'Profilaxie și igienizare',
-  'Ortodonție',
-  'Implantologie și regenerare',
-  'Estetică dentară',
-  'Protetică fixă',
-  'Protetică mobilă',
-  'Endodonție',
+  'Ortodonție și ortopedie dento-facială',
+  'Protetică',
+  'Implantologie',
+  'Chirurgie orală',
   'Parodontologie',
-  'Chirurgie orală și BMF',
+  'Endodonție',
   'Odontoterapie restauratoare',
-  'Consultații și diagnostic',
-  'Pedodonție',
-  'Proceduri adjuvante',
-  'Urgențe stomatologice',
+  'Estetică dentară',
 ];
 
 const categoriesToRender = preferredOrder.concat(

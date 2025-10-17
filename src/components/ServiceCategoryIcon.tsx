@@ -1,18 +1,14 @@
 import React from 'react';
 import {
-  AlarmClock,
-  Baby,
   Bone,
   Braces,
   ClipboardList,
   Crown,
   Drill,
   HeartPulse,
-  Layers,
   ShieldCheck,
   Sparkles,
   Stethoscope,
-  Syringe,
   WandSparkles,
   Wrench,
 } from 'lucide-react';
@@ -22,20 +18,16 @@ import type { ServiceCategoryId } from '@/data/services';
 type LucideIcon = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const iconMap: Record<ServiceCategoryId, LucideIcon> = {
+  'Consultații': ClipboardList,
   'Profilaxie și igienizare': Sparkles,
-  'Ortodonție': Braces,
-  'Implantologie și regenerare': Bone,
-  'Chirurgie orală și BMF': ShieldCheck,
-  'Protetică fixă': Crown,
-  'Protetică mobilă': Layers,
-  'Endodonție': Drill,
-  'Estetică dentară': WandSparkles,
+  'Ortodonție și ortopedie dento-facială': Braces,
+  'Protetică': Crown,
+  'Implantologie': Bone,
+  'Chirurgie orală': ShieldCheck,
   'Parodontologie': HeartPulse,
+  'Endodonție': Drill,
   'Odontoterapie restauratoare': Wrench,
-  'Consultații și diagnostic': ClipboardList,
-  'Pedodonție': Baby,
-  'Proceduri adjuvante': Syringe,
-  'Urgențe stomatologice': AlarmClock,
+  'Estetică dentară': WandSparkles,
 };
 
 export const ServiceCategoryIcon = ({

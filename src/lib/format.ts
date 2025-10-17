@@ -1,8 +1,21 @@
-import type { Currency } from '@/data/services';
+import type { Currency, ServicePrice } from '@/data/services';
 
-export const formatPrice = (value: number, currency: Currency) => {
+const formatNumeric = (value: number, currency: Currency) => {
   if (currency === 'RON') {
-    return `${value.toLocaleString('ro-RO')} lei`;
+    return value.toLocaleString('ro-RO');
   }
-  return `${value.toLocaleString('ro-RO', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} €`;
+  return value.toLocaleString('ro-RO', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+};
+
+export const formatPrice = (price: ServicePrice) => {
+  if (price.type === 'range') {
+    const suffix = price.currency === 'RON' ? ' lei' : ' €';
+    return `${formatNumeric(price.min, price.currency)} - ${formatNumeric(price.max, price.currency)}${suffix}`;
+  }
+
+  if (price.currency === 'RON') {
+    return `${formatNumeric(price.amount, price.currency)} lei`;
+  }
+
+  return `${formatNumeric(price.amount, price.currency)} €`;
 };
