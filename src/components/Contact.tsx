@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,16 +13,99 @@ import {
   Calendar
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { serviceCategories, serviceItems } from '@/data/generated/services-data';
 
 const Contact = () => {
   const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    category: "",
+    service: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Get services filtered by selected category
+  const availableServices = useMemo(() => {
+    if (!formData.category || formData.category === "general") {
+      return [];
+    }
+    return serviceItems.filter(item => item.category === formData.category);
+  }, [formData.category]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mesaj trimis cu succes!",
-      description: "Vă vom contacta în cel mai scurt timp posibil.",
-    });
+    setIsSubmitting(true);
+
+    // Build subject line
+    let subject = "Programare nouă";
+    if (formData.category === "general") {
+      subject = "Întrebare generală";
+    } else if (formData.service) {
+      subject = `Programare nouă: ${formData.service}`;
+    } else if (formData.category) {
+      subject = `Programare nouă: ${formData.category}`;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "9729e067-7f3d-4a8e-bb49-ab5faa5d8ef1",
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          category: formData.category,
+          service: formData.service,
+          message: formData.message,
+          subject: subject,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        toast({
+          title: "Mesaj trimis cu succes!",
+          description: "Vă vom contacta în cel mai scurt timp posibil.",
+        });
+        setFormData({ name: "", phone: "", email: "", category: "", service: "", message: "" });
+      } else {
+        toast({
+          title: "Eroare",
+          description: "Nu am putut trimite mesajul. Vă rugăm să încercați din nou.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Eroare",
+        description: "A apărut o eroare. Vă rugăm să încercați din nou.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    
+    // If category changes, reset service selection
+    if (name === "category") {
+      setFormData({
+        ...formData,
+        category: value,
+        service: ""
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
   };
 
   const contactInfo = [
@@ -88,6 +171,9 @@ const Contact = () => {
                   <Label htmlFor="name">Nume complet *</Label>
                   <Input 
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Ion Popescu"
                     required
                     className="font-inter"
@@ -98,7 +184,10 @@ const Contact = () => {
                   <Label htmlFor="phone">Telefon *</Label>
                   <Input 
                     id="phone"
+                    name="phone"
                     type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="+40 7XX XXX XXX"
                     required
                     className="font-inter"
@@ -110,41 +199,80 @@ const Contact = () => {
                 <Label htmlFor="email">Email</Label>
                 <Input 
                   id="email"
+                  name="email"
                   type="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="ion.popescu@email.com"
                   className="font-inter"
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="service">Serviciu dorit</Label>
+                <Label htmlFor="category">Tip solicitare *</Label>
                 <select 
-                  id="service"
-                  className="w-full px-3 py-2 border border-input rounded-lg bg-background font-inter text-foreground"
+                  id="category"
+                  name="category"
+                  value={formData.category}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 border border-input rounded-lg bg-background font-inter text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 >
-                  <option>Selectează un serviciu</option>
-                  <option>Consultație generală</option>
-                  <option>Implantologie</option>
-                  <option>Ortodonție</option>
-                  <option>Estetică dentară</option>
-                  <option>Urgență</option>
-                  <option>Altele</option>
+                  <option value="">Selectează tipul solicitării</option>
+                  <option value="general">Întrebare generală</option>
+                  <optgroup label="Categorii servicii">
+                    {serviceCategories.map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </optgroup>
                 </select>
               </div>
+
+              {/* Conditionally show specific service dropdown */}
+              {formData.category && formData.category !== "general" && (
+                <div className="space-y-2 animate-fade-up">
+                  <Label htmlFor="service">Serviciu specific</Label>
+                  <select 
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-input rounded-lg bg-background font-inter text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">Selectează un serviciu (opțional)</option>
+                    {availableServices.map((item) => (
+                      <option key={item.id} value={item.name}>
+                        {item.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
               
               <div className="space-y-2">
                 <Label htmlFor="message">Mesaj</Label>
                 <Textarea 
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Descrie problema ta sau întrebările pe care le ai..."
                   rows={4}
                   className="font-inter"
                 />
               </div>
               
-              <Button type="submit" variant="hero" size="lg" className="w-full">
+              <Button 
+                type="submit" 
+                variant="hero" 
+                size="lg" 
+                className="w-full"
+                disabled={isSubmitting}
+              >
                 <Calendar className="mr-2" />
-                Trimite cererea de programare
+                {isSubmitting ? "Se trimite..." : "Trimite cererea de programare"}
               </Button>
             </form>
           </Card>
