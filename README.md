@@ -4,6 +4,27 @@
 
 **URL**: https://lovable.dev/projects/686f7340-ad6a-418a-945c-59666b82c486
 
+## Updating prices and team information
+
+The site reads pricing and team data directly from the CSV files in `public/`. To update the live site:
+
+1. In GitHub, edit `public/lista_preturi_servicii.csv` (for prices) or `public/personal_list.csv` (for team members).
+2. Adjust the desired rows (for example, change the `Pret` value for “ANESTEZIE” from `50.00` to `75.00` or add a new team row).
+3. Scroll down and commit the change – Netlify will rebuild automatically, and the `/lista-preturi` and team sections will refresh with the new data.
+
+### CSV format tips
+
+- Keep the column headers unchanged:  
+  `Nr.crt.,Denumire manopera,Pret,Categorie` for prices and `Nr.crt,Nr.poza,Nume si prenume,Functia` for team.
+- Prices accept values like `500`, `500.00`, `450 EURO` or ranges such as `2000.00-2500.00`. The scripts convert them to the right format automatically.
+- Categories must stay within the existing set (Consultații, Profilaxie și igienizare, Ortodonție și ortopedie dento-facială, Protetică, Implantologie, Chirurgie orală, Parodontologie, Endodonție, Odontoterapie restauratoare, Estetică dentară). If a new category is needed, update the sync script accordingly.
+- For team photos, fill `Nr.poza` with the numeric suffix of the photo file (e.g., `75` becomes `/poze_cabinet/Foto-75.jpg`). Leave the field blank to omit the photo.
+
+### Local development
+
+- Run `npm run sync:data` to regenerate the TypeScript data modules from the CSV files.
+- `npm run build` automatically executes the sync step via the `prebuild` hook, so local and Netlify builds always stay in sync.
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
