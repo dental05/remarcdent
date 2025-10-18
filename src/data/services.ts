@@ -65,7 +65,7 @@ export const serviceCategoryMeta: Record<ServiceCategoryId, ServiceCategoryMeta>
   },
   'Endodonție': {
     id: 'Endodonție',
-    title: 'Endodonție microscopică',
+    title: 'Endodonție la microscop',
     description: 'Tratamente de canal moderne, reintervenții și obturații sigure pentru salvarea dinților.',
     featuredExamples: [55, 146, 154],
   },

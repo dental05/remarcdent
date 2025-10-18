@@ -1,7 +1,7 @@
-import Team from '@/components/Team';
-import { Button } from '@/components/ui/button';
-import { Users, Award, Microscope } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Team from "@/components/Team";
+import { Button } from "@/components/ui/button";
+import { Users, Award, Microscope } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TeamPage = () => {
   return (
@@ -17,19 +17,26 @@ const TeamPage = () => {
                 Medici stomatologi dedicați fiecărui zâmbet
               </h1>
               <p className="mb-8 font-inter text-base md:text-lg text-muted-foreground leading-relaxed">
-                23 de medici și tehnicieni dentari colaborează zilnic într-un flux integrat, susținut de laboratorul
-                nostru propriu de tehnică dentară, pentru planuri de tratament rapide și rezultate predictibile.
+                23 de medici stomatologi, tehnicieni dentari și asistenți
+                medicali colaborează zilnic într-un flux integrat, susținut de
+                laboratorul nostru propriu de tehnică dentară, pentru planuri de
+                tratament rapide și rezultate predictibile.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
                 {[
-                  { Icon: Users, label: 'Echipă multidisciplinară coordonată' },
-                  { Icon: Microscope, label: 'Tratamente ghidate digital' },
-                  { Icon: Award, label: 'Formare continuă și certificări' },
+                  { Icon: Users, label: "Echipă multidisciplinară coordonată" },
+                  { Icon: Microscope, label: "Tratamente ghidate digital" },
+                  { Icon: Award, label: "Formare continuă și certificări" },
                 ].map(({ Icon, label }) => (
-                  <div key={label} className="flex items-center gap-2 rounded-full bg-background border border-border/40 px-4 py-2">
+                  <div
+                    key={label}
+                    className="flex items-center gap-2 rounded-full bg-background border border-border/40 px-4 py-2"
+                  >
                     <Icon className="h-4 w-4 text-primary" />
-                    <span className="font-inter text-sm text-foreground/90">{label}</span>
+                    <span className="font-inter text-sm text-foreground/90">
+                      {label}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -53,9 +60,9 @@ const TeamPage = () => {
                   playsInline
                   className="absolute top-1/2 left-1/2"
                   style={{
-                    width: 'auto',
-                    height: '180%',
-                    transform: 'translate(-50%, -50%) rotate(90deg)',
+                    width: "auto",
+                    height: "180%",
+                    transform: "translate(-50%, -50%) rotate(90deg)",
                   }}
                 >
                   <source src="/poze_cabinet/video1.mp4" type="video/mp4" />

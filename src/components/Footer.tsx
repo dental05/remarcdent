@@ -1,6 +1,6 @@
-import React from 'react';
-import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,8 +19,8 @@ const Footer = () => {
               />
             </div>
             <p className="font-inter text-sm opacity-80 leading-relaxed">
-              Oferim servicii stomatologice complete într-un mediu modern și prietenos, 
-              cu focus pe calitate și confortul pacientului.
+              Oferim servicii stomatologice complete într-un mediu modern și
+              prietenos, cu focus pe calitate și confortul pacientului.
             </p>
           </div>
 
@@ -29,27 +29,42 @@ const Footer = () => {
             <h3 className="font-poppins font-semibold mb-4">Linkuri Rapide</h3>
             <ul className="space-y-2 font-inter text-sm">
               <li>
-                <Link to="/despre" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link
+                  to="/despre"
+                  className="opacity-80 hover:opacity-100 hover:text-accent transition-all"
+                >
                   Despre Noi
                 </Link>
               </li>
               <li>
-                <Link to="/servicii" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link
+                  to="/servicii"
+                  className="opacity-80 hover:opacity-100 hover:text-accent transition-all"
+                >
                   Servicii
                 </Link>
               </li>
               <li>
-                <Link to="/lista-preturi" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link
+                  to="/lista-preturi"
+                  className="opacity-80 hover:opacity-100 hover:text-accent transition-all"
+                >
                   Tarife
                 </Link>
               </li>
               <li>
-                <Link to="/echipa" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link
+                  to="/echipa"
+                  className="opacity-80 hover:opacity-100 hover:text-accent transition-all"
+                >
                   Echipa
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                <Link
+                  to="/contact"
+                  className="opacity-80 hover:opacity-100 hover:text-accent transition-all"
+                >
                   Contact
                 </Link>
               </li>
@@ -60,15 +75,22 @@ const Footer = () => {
           <div>
             <h3 className="font-poppins font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
-              <a 
-                href="tel:+40728254326" 
+              <a
+                href="tel:+40728254326"
                 className="flex items-center gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
               >
                 <Phone className="w-4 h-4" />
                 0728 254 326
               </a>
-              <a 
-                href="mailto:remarcdent@yahoo.com" 
+              <a
+                href="tel:+40258811571"
+                className="flex items-center gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
+              >
+                <Phone className="w-4 h-4" />
+                0258 811 571
+              </a>
+              <a
+                href="mailto:remarcdent@yahoo.com"
                 className="flex items-center gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
               >
                 <Mail className="w-4 h-4" />
@@ -81,20 +103,33 @@ const Footer = () => {
                 className="flex items-start gap-2 font-inter text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all"
               >
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>Tudor Vladimirescu nr 3,<br />Alba Iulia, Romania</span>
+                <span>
+                  Tudor Vladimirescu nr 3,
+                  <br />
+                  Alba Iulia, Romania
+                </span>
               </a>
-              </div>
+            </div>
 
             {/* Social Media */}
             <div className="flex gap-3 mt-4">
-              <a 
-                href="https://www.facebook.com/profile.php?id=100063492641385" 
-                target="_blank" 
+              <a
+                href="https://www.facebook.com/profile.php?id=100063492641385"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-foreground transition-all"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/remarcdent/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-foreground transition-all"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
