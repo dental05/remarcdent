@@ -41,7 +41,7 @@ export const serviceCategoryMeta: Record<ServiceCategoryId, ServiceCategoryMeta>
   },
   'Protetică': {
     id: 'Protetică',
-    title: 'Protetică fixă și mobilă',
+    title: 'Protetică fixă/mobilizabilă',
     description: 'Coroane, punți și proteze adaptate estetic și funcțional pentru reabilitări complete.',
     featuredExamples: [34, 119, 140],
   },
