@@ -21,7 +21,7 @@ Nr.crt.,Denumire manopera,Pret,Categorie
 20,BUILT UP,150.00,Odontoterapie restauratoare
 21,BUTON NANCE,350.00,Ortodontie si ortopedie dento-faciala
 22,CHISTECTOMIE,150.00,Chirurgie orala
-23,CHURETAJ / DINTE,50.00,Parodontologie
+23,CHIURETAJ / DINTE,50.00,Parodontologie
 24,CIMENTARE DEFINITIVA DINTE,50.00,Protetica
 25,COAFAJ DIRECT BIOCERAMICA,200.00,Odontoterapie restauratoare
 26,COAFAJ INDIRECT,150.00,Odontoterapie restauratoare
@@ -100,7 +100,7 @@ Nr.crt.,Denumire manopera,Pret,Categorie
 99,LASER PARO/DINTE,50.00,Parodontologie
 100,LIP BUMPER,400.00,Ortodontie si ortopedie dento-faciala
 101,MENTINATOR DE SPATIU,350.00,Ortodontie si ortopedie dento-faciala
-102,MINIIMPLANT ORTODONTIC,350.00,Ortodontie si ortopedie dento-faciala
+102,MINI-IMPLANT ORTODONTIC,350.00,Ortodontie si ortopedie dento-faciala
 103,MOCK-UP,400.00,Estetica dentara
 104,OBTURARE ENDO VERTICALA CALD CANAL SUPILMENTAR,70.00,Endodontie
 105,OBTURARE ENDO VERTICALA LA CALD MONORA,180.00,Endodontie

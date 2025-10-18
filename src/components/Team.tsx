@@ -1,21 +1,21 @@
-import React from 'react';
-import { Card } from '@/components/ui/card';
-import { orderedCategories, teamMembers, type TeamMember } from '@/data/team';
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { orderedCategories, teamMembers, type TeamMember } from "@/data/team";
 
-const categoryLabels: Record<TeamMember['category'], string> = {
-  Medici: 'Medici stomatologi',
-  'Tehnicieni dentari': 'Tehnicieni dentari',
-  'Asistenti medicali': 'Asistenți medicali',
-  'Management & suport': 'Management și suport',
+const categoryLabels: Record<TeamMember["category"], string> = {
+  Medici: "Medici stomatologi",
+  "Tehnicieni dentari": "Tehnicieni dentari",
+  "Asistenti medicali": "Asistenți medicali",
+  "Management & suport": "Management și suport",
 };
 
 const getInitials = (name: string) =>
   name
-    .split(' ')
+    .split(" ")
     .filter(Boolean)
     .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? '')
-    .join('');
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
 
 const Team = () => {
   const groupedTeam = orderedCategories
@@ -26,10 +26,18 @@ const Team = () => {
     .filter(({ members }) => members.length > 0);
 
   const totalMembers = teamMembers.length;
-  const medicsCount = teamMembers.filter((member) => member.category === 'Medici').length;
-  const techniciansCount = teamMembers.filter((member) => member.category === 'Tehnicieni dentari').length;
-  const assistantsCount = teamMembers.filter((member) => member.category === 'Asistenti medicali').length;
-  const supportCount = teamMembers.filter((member) => member.category === 'Management & suport').length;
+  const medicsCount = teamMembers.filter(
+    (member) => member.category === "Medici"
+  ).length;
+  const techniciansCount = teamMembers.filter(
+    (member) => member.category === "Tehnicieni dentari"
+  ).length;
+  const assistantsCount = teamMembers.filter(
+    (member) => member.category === "Asistenti medicali"
+  ).length;
+  const supportCount = teamMembers.filter(
+    (member) => member.category === "Management & suport"
+  ).length;
 
   return (
     <section id="team" className="py-20 bg-secondary">
@@ -39,8 +47,9 @@ const Team = () => {
             Echipa REMARC DENT
           </h2>
           <p className="font-inter text-lg text-muted-foreground">
-            Suntem o echipă multidisciplinară de medici stomatologi, tehnicieni, asistenți și profesioniști în management pregătiți
-            să ofere îngrijire completă, empatică și modernă fiecărui pacient.
+            Suntem o echipă multidisciplinară de medici stomatologi, tehnicieni,
+            asistenți și profesioniști în management pregătiți să ofere
+            îngrijire completă, empatică și modernă fiecărui pacient.
           </p>
         </div>
 
@@ -52,7 +61,8 @@ const Team = () => {
                   {categoryLabels[category]}
                 </h3>
                 <p className="font-inter text-sm text-muted-foreground mt-1">
-                  {members.length} {members.length === 1 ? 'membru' : 'membri'} în echipa noastră
+                  {members.length} {members.length === 1 ? "membru" : "membri"}{" "}
+                  în echipa noastră
                 </p>
               </div>
             </div>
@@ -70,7 +80,7 @@ const Team = () => {
                         src={member.photo}
                         alt={member.name}
                         loading="lazy"
-                        className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105 will-change-transform"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/15 via-accent/20 to-primary/10">
@@ -82,10 +92,16 @@ const Team = () => {
                   </div>
 
                   <div className="p-6 border-t border-border/60 bg-background">
-                    <h4 className="font-poppins text-lg font-semibold text-foreground mb-1">{member.name}</h4>
-                    <p className="font-inter text-sm text-accent font-medium mb-2">{member.role}</p>
+                    <h4 className="font-poppins text-lg font-semibold text-foreground mb-1">
+                      {member.name}
+                    </h4>
+                    <p className="font-inter text-sm text-accent font-medium mb-2">
+                      {member.role}
+                    </p>
                     {member.details ? (
-                      <p className="font-inter text-sm text-muted-foreground leading-relaxed">{member.details}</p>
+                      <p className="font-inter text-sm text-muted-foreground leading-relaxed">
+                        {member.details}
+                      </p>
                     ) : null}
                   </div>
                 </Card>
@@ -97,20 +113,36 @@ const Team = () => {
         <div className="mt-16 bg-gradient-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
           <div className="grid gap-6 text-center sm:grid-cols-2 xl:grid-cols-4">
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">{totalMembers}</p>
-              <p className="font-inter text-sm opacity-90">Profesioniști dedicați</p>
+              <p className="font-poppins text-3xl font-bold mb-2">
+                {totalMembers}
+              </p>
+              <p className="font-inter text-sm opacity-90">
+                Profesioniști dedicați
+              </p>
             </div>
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">{medicsCount}</p>
-              <p className="font-inter text-sm opacity-90">Medici stomatologi</p>
+              <p className="font-poppins text-3xl font-bold mb-2">
+                {medicsCount}
+              </p>
+              <p className="font-inter text-sm opacity-90">
+                Medici stomatologi
+              </p>
             </div>
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">{assistantsCount}</p>
-              <p className="font-inter text-sm opacity-90">Asistenți medicali</p>
+              <p className="font-poppins text-3xl font-bold mb-2">
+                {assistantsCount}
+              </p>
+              <p className="font-inter text-sm opacity-90">
+                Asistenți medicali
+              </p>
             </div>
             <div>
-              <p className="font-poppins text-3xl font-bold mb-2">{techniciansCount + supportCount}</p>
-              <p className="font-inter text-sm opacity-90">Tehnicieni și suport</p>
+              <p className="font-poppins text-3xl font-bold mb-2">
+                {techniciansCount + supportCount}
+              </p>
+              <p className="font-inter text-sm opacity-90">
+                Tehnicieni și suport
+              </p>
             </div>
           </div>
         </div>

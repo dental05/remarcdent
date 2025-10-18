@@ -19,7 +19,7 @@ const TeamPage = () => {
               <p className="mb-8 font-inter text-base md:text-lg text-muted-foreground leading-relaxed">
                 23 de medici stomatologi, tehnicieni dentari și asistenți
                 medicali colaborează zilnic într-un flux integrat, susținut de
-                laboratorul nostru propriu de tehnică dentară, pentru planuri de
+                laboratorul nostru de tehnică dentară, pentru planuri de
                 tratament rapide și rezultate predictibile.
               </p>
 
