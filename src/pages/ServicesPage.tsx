@@ -17,8 +17,8 @@ const ServicesPage = () => {
                 Soluții complete pentru sănătatea și estetica zâmbetului tău
               </h1>
               <p className="mb-8 font-inter text-base md:text-lg text-muted-foreground leading-relaxed">
-                De la profilaxie și tratamente pediatric până la reabilitări pe implant și estetică dentară avansată,
-                fiecare etapă este realizată în aceeași clinică, cu suportul laboratorului nostru propriu de tehnică dentară.
+                De la profilaxie și tratamente pediatrice până la reabilitări complexe pe implanturi și estetică dentară avansată,
+                fiecare etapă este realizată in-house, cu suportul laboratorului nostru de tehnică dentară.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
