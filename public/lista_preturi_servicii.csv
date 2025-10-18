@@ -9,8 +9,8 @@ Nr.crt.,Denumire manopera,Pret,Categorie
 8,APARAT BENEFIT,3500.00,Ortodontie si ortopedie dento-faciala
 9,APARAT DISTALIZARE/MEZIALIZARE,1200.00,Ortodontie si ortopedie dento-faciala
 10,APARAT EXTRAORAL,600.00,Ortodontie si ortopedie dento-faciala
-11,APARAT FIX FIZIONOMICConsultatiiRCADA,3800.00,Ortodontie si ortopedie dento-faciala
-12,APARAT FIX METALICConsultatiiRCADA,2600.00,Ortodontie si ortopedie dento-faciala
+11,APARAT FIX FIZIONOMIC PE ARCADA,3800.00,Ortodontie si ortopedie dento-faciala
+12,APARAT FIX METALIC PE ARCADA,2600.00,Ortodontie si ortopedie dento-faciala
 13,APARAT FUNCTIONAL,800.00,Ortodontie si ortopedie dento-faciala
 14,APARAT MOBILIZABIL,1200.00,Ortodontie si ortopedie dento-faciala
 15,APLICARE MTA DOP APICAL,200.00,Endodontie
@@ -22,7 +22,7 @@ Nr.crt.,Denumire manopera,Pret,Categorie
 21,BUTON NANCE,350.00,Ortodontie si ortopedie dento-faciala
 22,CHISTECTOMIE,150.00,Chirurgie orala
 23,CHURETAJ / DINTE,50.00,Parodontologie
-24,CIMENTARE DEFINITIVAEndodontieINTE,50.00,Protetica
+24,CIMENTARE DEFINITIVA DINTE,50.00,Protetica
 25,COAFAJ DIRECT BIOCERAMICA,200.00,Odontoterapie restauratoare
 26,COAFAJ INDIRECT,150.00,Odontoterapie restauratoare
 27,CONSULTATIE,150.00,Consultatii
@@ -68,24 +68,24 @@ Nr.crt.,Denumire manopera,Pret,Categorie
 67,FATETA CERAMICA,1000.00,Protetica
 68,FLUORIZARE,500.00,Profilaxie si igienizare
 69,FLUORIZARE MONODOZA,100.00,Profilaxie si igienizare
-70,FRENECTOMIEImplantologieRENOPLASTIE BRIDE,300.00,Chirurgie orala
+70,FRENECTOMIE FRENOPLASTIE BRIDE,300.00,Chirurgie orala
 71,GARNITURA PROTEZA,100.00,Protetica
 72,GINGIVECTOMIE,100.00,Parodontologie
 73,GINGIVO OSTEPOLASTIE,120.00,Parodontologie
 74,GINGIVOPLASTIE,100.00,Parodontologie
-75,GREFA GINGIVALA LIBERAEndodontieINTE,500.00,Parodontologie
+75,GREFA GINGIVALA LIBERA/DINTE,500.00,Parodontologie
 76,GREFA GINGIVALA LIBERA/2 DINTI,750.00,Parodontologie
 77,GUTIERA,300.00,Ortodontie si ortopedie dento-faciala
 78,GUTIERA ORTODONTICA,300.00,Ortodontie si ortopedie dento-faciala
-79,IGENIZARE CLORAMINAChirurgie oralaDDOFORM,100.00,Chirurgie orala
-80,IGIENIZARE CU JET DE BICARBONAT ConsultatiiRCAD,100.00,Profilaxie si igienizare
+79,IGIENIZARE CLORAMINA IODOFORM,100.00,Chirurgie orala
+80,IGIENIZARE CU JET DE BICARBONAT PE ARCADA,100.00,Profilaxie si igienizare
 81,IMOBILIZARE / DINTE,100.00,Parodontologie
 82,IMPLANT MEGAGEN ANYONE,400 EURO,Implantologie
-83,IMPLANT MEGAGEN ANYRIDEGE,500 EURO,Implantologie
+83,IMPLANT MEGAGEN ANYRIDGE,500 EURO,Implantologie
 84,IMPLANT STRAUMANN BLX,650 EURO,Implantologie
 85,IMPLANT STRAUMANN MINI,3000.00,Implantologie
 86,INCHIDERE PERFORATIE,200.00,Endodontie
-87,INCIZIE DRENAJ ENDOORAL ABCES VESTIBULAR,150.00,Chirurgie orala
+87,INCIZIE DRENAJ ENDORAL ABCES VESTIBULAR,150.00,Chirurgie orala
 88,INDEPARTARE DCR,200.00,Endodontie
 89,INDEPARTARE PIVOT STICLA,200.00,Endodontie
 90,INFILTRATII NEVRALGIE TRIGEMINALA,100.00,Chirurgie orala
@@ -97,7 +97,7 @@ Nr.crt.,Denumire manopera,Pret,Categorie
 96,LAMBOU DE ASANARE,200.00,Parodontologie
 97,LAMBOU POZITIONAT CORONAR CU GREFA DE CONJUNCTIV,900.00,Parodontologie
 98,LASER CHIRURGIE,80.00,Chirurgie orala
-99,LASER PAROEndodontieINTE,50.00,Parodontologie
+99,LASER PARO/DINTE,50.00,Parodontologie
 100,LIP BUMPER,400.00,Ortodontie si ortopedie dento-faciala
 101,MENTINATOR DE SPATIU,350.00,Ortodontie si ortopedie dento-faciala
 102,MINIIMPLANT ORTODONTIC,350.00,Ortodontie si ortopedie dento-faciala
