@@ -107,7 +107,7 @@ const About = () => {
                 {[
                   { value: '20+', label: 'Ani experiență' },
                   { value: '10000+', label: 'Pacienți' },
-                  { value: '23', label: 'Medici stomatologi' }
+                  { value: '12', label: 'Medici stomatologi' }
                 ].map((stat) => (
                   <div
                     key={stat.label}
