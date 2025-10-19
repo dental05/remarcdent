@@ -75,12 +75,6 @@ export const serviceCategoryMeta: Record<ServiceCategoryId, ServiceCategoryMeta>
     description: 'Obturații fotopolimerizabile, reconstrucții și coafaje pentru refacerea structurii dentare.',
     featuredExamples: [20, 107, 110],
   },
-  'Estetică dentară': {
-    id: 'Estetică dentară',
-    title: 'Estetică dentară',
-    description: 'Albiri profesionale, mock-up-uri și bijuterii dentare pentru un zâmbet luminos.',
-    featuredExamples: [5, 103, 156],
-  },
 };
 
 export const servicesGroupedByCategory = serviceCategories.map(category => ({

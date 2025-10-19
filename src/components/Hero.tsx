@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 py-24">
         <div className="max-w-3xl mx-auto text-center text-primary-foreground animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-4 py-2 text-xs font-medium uppercase tracking-[0.3em] text-primary backdrop-blur-sm">
-            Clinica REMARC DENT
+            Cabinetul REMARC DENT
           </span>
 
           <h1 className="mt-6 mb-4 font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">

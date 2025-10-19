@@ -1,33 +1,39 @@
-import React from 'react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { serviceCategoryMeta, serviceItems, serviceCategories, type ServiceCategoryId } from '@/data/services';
-import { slugify } from '@/lib/string';
-import { ServiceCategoryIcon } from '@/components/ServiceCategoryIcon';
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import {
+  serviceCategoryMeta,
+  serviceItems,
+  serviceCategories,
+  type ServiceCategoryId,
+} from "@/data/services";
+import { slugify } from "@/lib/string";
+import { ServiceCategoryIcon } from "@/components/ServiceCategoryIcon";
 
 const preferredOrder: ServiceCategoryId[] = [
-  'Consultații',
-  'Profilaxie și igienizare',
-  'Ortodonție și ortopedie dento-facială',
-  'Protetică',
-  'Implantologie',
-  'Chirurgie orală',
-  'Parodontologie',
-  'Endodonție',
-  'Odontoterapie restauratoare',
-  'Estetică dentară',
+  "Consultații",
+  "Profilaxie și igienizare",
+  "Ortodonție și ortopedie dento-facială",
+  "Protetică",
+  "Implantologie",
+  "Chirurgie orală",
+  "Parodontologie",
+  "Endodonție",
+  "Odontoterapie restauratoare",
 ];
 
 const categoriesToRender = preferredOrder.concat(
-  serviceCategories.filter((category) => !preferredOrder.includes(category)),
+  serviceCategories.filter((category) => !preferredOrder.includes(category))
 );
 
 const Services = () => {
   const cards = categoriesToRender.map((categoryId, index) => {
     const meta = serviceCategoryMeta[categoryId];
     const examples = meta.featuredExamples
-      ?.map(exampleId => serviceItems.find(item => item.id === exampleId)?.name)
+      ?.map(
+        (exampleId) => serviceItems.find((item) => item.id === exampleId)?.name
+      )
       .filter(Boolean)
       .slice(0, 3) as string[] | undefined;
 
@@ -41,8 +47,12 @@ const Services = () => {
           <ServiceCategoryIcon category={categoryId} className="w-8 h-8" />
         </div>
 
-        <h3 className="font-poppins text-xl font-semibold text-foreground mb-3">{meta.title}</h3>
-        <p className="font-inter text-muted-foreground mb-4 leading-relaxed">{meta.description}</p>
+        <h3 className="font-poppins text-xl font-semibold text-foreground mb-3">
+          {meta.title}
+        </h3>
+        <p className="font-inter text-muted-foreground mb-4 leading-relaxed">
+          {meta.description}
+        </p>
 
         {examples?.length ? (
           <ul className="space-y-2 mb-4">
@@ -61,8 +71,15 @@ const Services = () => {
           <Button asChild size="sm" variant="hero" className="px-4 py-2">
             <Link to={`/contact`}>Solicită o consultație</Link>
           </Button>
-          <Button asChild size="sm" variant="ghost" className="px-4 py-2 text-primary hover:text-accent">
-            <Link to={`/lista-preturi#${slugify(categoryId)}`}>Vezi tarife</Link>
+          <Button
+            asChild
+            size="sm"
+            variant="ghost"
+            className="px-4 py-2 text-primary hover:text-accent"
+          >
+            <Link to={`/lista-preturi#${slugify(categoryId)}`}>
+              Vezi tarife
+            </Link>
           </Button>
         </div>
       </Card>
@@ -77,8 +94,9 @@ const Services = () => {
             Serviciile REMARC DENT
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
-            Acoperim integral nevoile stomatologice – de la prevenție și estetică la intervenții chirurgicale complexe și
-            reabilitări pe implanturi, cu echipe dedicate fiecărei specialități.
+            Acoperim integral nevoile stomatologice – de la prevenție și
+            estetică la intervenții chirurgicale complexe și reabilitări pe
+            implanturi, cu echipe dedicate fiecărei specialități.
           </p>
         </div>
 

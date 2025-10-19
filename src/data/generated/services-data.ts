@@ -1,5 +1,5 @@
 // Auto-generated from public/lista_preturi_servicii.csv – do not edit manually.
-export type ServiceCategoryId = 'Consultații' | 'Profilaxie și igienizare' | 'Ortodonție și ortopedie dento-facială' | 'Protetică' | 'Implantologie' | 'Chirurgie orală' | 'Parodontologie' | 'Endodonție' | 'Odontoterapie restauratoare' | 'Estetică dentară';
+export type ServiceCategoryId = 'Consultații' | 'Profilaxie și igienizare' | 'Ortodonție și ortopedie dento-facială' | 'Protetică' | 'Implantologie' | 'Chirurgie orală' | 'Parodontologie' | 'Endodonție' | 'Odontoterapie restauratoare';
 export type Currency = 'RON' | 'EUR';
 
 export type ServicePrice =
@@ -18,7 +18,7 @@ export const serviceItems: ServiceItem[] = [
   { id: 2, name: 'ACTIVARE APARAT FIX BIMAXILAR', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 200, currency: 'RON' } },
   { id: 3, name: 'ACTIVARE APARAT MOBILIZABIL', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 50, currency: 'RON' } },
   { id: 4, name: 'ADITIE OSOASA', category: 'Parodontologie', price: { type: 'fixed', amount: 500, currency: 'RON' } },
-  { id: 5, name: 'ALBIRE ENDODONTICA', category: 'Estetică dentară', price: { type: 'fixed', amount: 150, currency: 'RON' } },
+  { id: 5, name: 'ALBIRE ENDODONTICA', category: 'Odontoterapie restauratoare', price: { type: 'fixed', amount: 150, currency: 'RON' } },
   { id: 6, name: 'ALVEOLOTOMIE', category: 'Chirurgie orală', price: { type: 'fixed', amount: 300, currency: 'RON' } },
   { id: 7, name: 'ANESTEZIE', category: 'Chirurgie orală', price: { type: 'fixed', amount: 50, currency: 'RON' } },
   { id: 8, name: 'APARAT BENEFIT', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 3500, currency: 'RON' } },
@@ -30,7 +30,7 @@ export const serviceItems: ServiceItem[] = [
   { id: 14, name: 'APARAT MOBILIZABIL', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 1200, currency: 'RON' } },
   { id: 15, name: 'APLICARE MTA DOP APICAL', category: 'Endodonție', price: { type: 'fixed', amount: 200, currency: 'RON' } },
   { id: 16, name: 'BARA PALATINALA/LINGUALA', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 350, currency: 'RON' } },
-  { id: 17, name: 'BIJUTERIE DENTARA', category: 'Estetică dentară', price: { type: 'fixed', amount: 300, currency: 'RON' } },
+  { id: 17, name: 'BIJUTERIE DENTARA', category: 'Odontoterapie restauratoare', price: { type: 'fixed', amount: 300, currency: 'RON' } },
   { id: 18, name: 'BONT PROTETIC MULTI-UNIT', category: 'Protetică', price: { type: 'fixed', amount: 600, currency: 'RON' } },
   { id: 19, name: 'BONT PROTETIC PENTRU IMPLANT', category: 'Protetică', price: { type: 'fixed', amount: 450, currency: 'RON' } },
   { id: 20, name: 'BUILT UP', category: 'Odontoterapie restauratoare', price: { type: 'fixed', amount: 150, currency: 'RON' } },
@@ -116,7 +116,7 @@ export const serviceItems: ServiceItem[] = [
   { id: 100, name: 'LIP BUMPER', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 400, currency: 'RON' } },
   { id: 101, name: 'MENTINATOR DE SPATIU', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 350, currency: 'RON' } },
   { id: 102, name: 'MINIIMPLANT ORTODONTIC', category: 'Ortodonție și ortopedie dento-facială', price: { type: 'fixed', amount: 350, currency: 'RON' } },
-  { id: 103, name: 'MOCK-UP', category: 'Estetică dentară', price: { type: 'fixed', amount: 400, currency: 'RON' } },
+  { id: 103, name: 'MOCK-UP', category: 'Odontoterapie restauratoare', price: { type: 'fixed', amount: 400, currency: 'RON' } },
   { id: 104, name: 'OBTURARE ENDO VERTICALA CALD CANAL SUPILMENTAR', category: 'Endodonție', price: { type: 'fixed', amount: 70, currency: 'RON' } },
   { id: 105, name: 'OBTURARE ENDO VERTICALA LA CALD MONORA', category: 'Endodonție', price: { type: 'fixed', amount: 180, currency: 'RON' } },
   { id: 106, name: 'OBTURATIE COLET', category: 'Odontoterapie restauratoare', price: { type: 'fixed', amount: 200, currency: 'RON' } },
@@ -169,7 +169,7 @@ export const serviceItems: ServiceItem[] = [
   { id: 153, name: 'TRATAMENT PREMOLAR LA CALD', category: 'Endodonție', price: { type: 'fixed', amount: 470, currency: 'RON' } },
   { id: 154, name: 'TRATAMENT CANAL CALCIFIAT', category: 'Endodonție', price: { type: 'fixed', amount: 120, currency: 'RON' } },
   { id: 155, name: 'TRATAMENT PERICORONARITELOR', category: 'Chirurgie orală', price: { type: 'fixed', amount: 50, currency: 'RON' } },
-  { id: 156, name: 'TRATAMENT PROFESIONAL BEYOND', category: 'Estetică dentară', price: { type: 'fixed', amount: 1200, currency: 'RON' } },
+  { id: 156, name: 'TRATAMENT PROFESIONAL BEYOND', category: 'Odontoterapie restauratoare', price: { type: 'fixed', amount: 1200, currency: 'RON' } },
   { id: 157, name: 'TRATAMENT SOFT LASER / ARCADA', category: 'Profilaxie și igienizare', price: { type: 'fixed', amount: 50, currency: 'RON' } },
 ];
 
@@ -182,7 +182,6 @@ export const serviceCategories: ServiceCategoryId[] = [
   'Chirurgie orală',
   'Parodontologie',
   'Endodonție',
-  'Odontoterapie restauratoare',
-  'Estetică dentară',
+  'Odontoterapie restauratoare'
 ];
 
