@@ -58,6 +58,8 @@ const TeamPage = () => {
                   muted
                   loop
                   playsInline
+                  preload="none"
+                  poster="/poze_cabinet/poster1.webp"
                   className="absolute top-1/2 left-1/2"
                   style={{
                     width: "auto",

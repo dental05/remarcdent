@@ -10,7 +10,7 @@ The site reads pricing and team data directly from the CSV files in `public/`. T
 
 1. In GitHub, edit `public/lista_preturi_servicii.csv` (for prices) or `public/personal_list.csv` (for team members).
 2. Adjust the desired rows (for example, change the `Pret` value for “ANESTEZIE” from `50.00` to `75.00` or add a new team row).
-3. Scroll down and commit the change – Netlify will rebuild automatically, and the `/lista-preturi` and team sections will refresh with the new data.
+3. Scroll down and commit the change – Cloudflare Pages will rebuild automatically, and the `/lista-preturi` and team sections will refresh with the new data.
 
 ### CSV format tips
 
@@ -18,12 +18,31 @@ The site reads pricing and team data directly from the CSV files in `public/`. T
   `Nr.crt.,Denumire manopera,Pret,Categorie` for prices and `Nr.crt,Nr.poza,Nume si prenume,Functia` for team.
 - Prices accept values like `500`, `500.00`, `450 EURO` or ranges such as `2000.00-2500.00`. The scripts convert them to the right format automatically.
 - Categories must stay within the existing set (Consultații, Profilaxie și igienizare, Ortodonție și ortopedie dento-facială, Protetică, Implantologie, Chirurgie orală, Parodontologie, Endodonție, Odontoterapie restauratoare, Estetică dentară). If a new category is needed, update the sync script accordingly.
-- For team photos, fill `Nr.poza` with the numeric suffix of the photo file (e.g., `75` becomes `/poze_cabinet/Foto-75.jpg`). Leave the field blank to omit the photo.
+- For team photos, fill `Nr.poza` with the numeric suffix of the photo file (e.g., `75` becomes `/poze_cabinet/Foto-75.webp`). Leave the field blank to omit the photo — the card falls back to the person's initials.
+
+### Adding a new team photo
+
+The site serves 800px WebP files; the full-resolution originals live in
+`photos-original/` and are never deployed. Adding a photo takes two steps:
+
+1. Put the original in `photos-original/poze_cabinet/` as `Foto-<number>.jpg`.
+2. Reference `<number>` in the `Nr.poza` column, then run:
+
+   ```sh
+   ./scripts/optimize-photos.sh
+   ```
+
+That writes `public/poze_cabinet/Foto-<number>.webp`. The script only builds
+photos the CSV actually references, and warns if a referenced original is
+missing. Requires `cwebp` (`brew install webp`).
+
+Do not put full-resolution photos in `public/` — everything there is deployed
+as-is. The originals average about 6.5 MB each; the WebP versions are ~25 KB.
 
 ### Local development
 
 - Run `npm run sync:data` to regenerate the TypeScript data modules from the CSV files.
-- `npm run build` automatically executes the sync step via the `prebuild` hook, so local and Netlify builds always stay in sync.
+- `npm run build` automatically executes the sync step via the `prebuild` hook, so local and Cloudflare builds always stay in sync.
 
 ## How can I edit this code?
 

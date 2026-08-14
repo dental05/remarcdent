@@ -57,6 +57,8 @@ const ServicesPage = () => {
                   muted
                   loop
                   playsInline
+                  preload="none"
+                  poster="/poze_cabinet/poster3.webp"
                 >
                   <source src="/poze_cabinet/video3.mp4" type="video/mp4" />
                 </video>

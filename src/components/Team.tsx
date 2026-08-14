@@ -80,6 +80,9 @@ const Team = () => {
                         src={member.photo}
                         alt={member.name}
                         loading="lazy"
+                        decoding="async"
+                        width={800}
+                        height={533}
                         className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105 will-change-transform"
                       />
                     ) : (

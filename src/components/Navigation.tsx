@@ -42,7 +42,13 @@ const Navigation = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div onClick={() => navigate('/')} className="flex items-center cursor-pointer">
-              <img src="/logo_remarc.png" alt="REMARC DENT" className="h-12 w-auto" />
+              <img
+                src="/logo_remarc.webp"
+                alt="REMARC DENT"
+                className="h-12 w-auto"
+                width={400}
+                height={184}
+              />
             </div>
 
             {/* Desktop Navigation */}

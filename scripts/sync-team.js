@@ -54,7 +54,9 @@ const ensurePhotoPath = (value) => {
   if (!trimmed) {
     return undefined;
   }
-  return `/poze_cabinet/Foto-${trimmed}.jpg`;
+  // Served as WebP: originals live in photos-original/ and are resized to 800px
+  // at ~1/300th the byte size. Keep the CSV column as a plain photo number.
+  return `/poze_cabinet/Foto-${trimmed}.webp`;
 };
 
 const main = async () => {

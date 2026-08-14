@@ -13,9 +13,12 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src="/logo_remarc.png"
+                src="/logo_remarc.webp"
                 alt="REMARC DENT"
                 className="h-12 w-auto"
+                width={400}
+                height={184}
+                loading="lazy"
               />
             </div>
             <p className="font-inter text-sm opacity-80 leading-relaxed">
